@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFS Tareas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #22B54B;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .title {
+            font-size: 24px;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .lang-button {
+            background-color: #d3d3d3;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .task-timer {
+            background-color: #22B54B;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .task-timer .timer {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .tasks-summary {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .tasks-info {
+            text-align: center;
+        }
+
+        .tasks-count {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .task-status {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .status-tab {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .status-tab.active {
+            border-bottom: 2px solid black;
+        }
+
+        .no-data {
+            text-align: center;
+            color: grey;
+            margin-top: 20px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #22B54B;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            color: white;
+        }
+
+        .nav-item {
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .nav-item.active {
+            background-color: #1A8C3D;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+
+        .floating-buttons {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+        }
+
+        .chat-button, .email-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background-color: #f5f5f5;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .chat-button {
+            background-image: url('chat-icon.png');
+        }
+
+        .email-button {
+            background-image: url('email-icon.png');
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="logo.png" alt="IFS Logo" class="logo">
+            <span class="title">IFS</span>
+        </div>
+        <div class="header-right">
+            <button class="lang-button">español</button>
+        </div>
+    </header>
+
+    <section class="task-timer">
+        <span>Restablecer tarea</span>
+        <span class="timer">00:46:45</span>
+    </section>
+
+    <section class="tasks-summary">
+        <div class="tasks-info">
+            <p>Todas las tareas para hoy</p>
+            <p class="tasks-count">0</p>
+        </div>
+        <div class="tasks-info">
+            <p>Las tareas pendientes de hoy</p>
+            <p class="tasks-count">0</p>
+        </div>
+    </section>
+
+    <section class="task-status">
+        <div class="status-tab active">En curso</div>
+        <div class="status-tab">Terminado</div>
+        <div class="no-data">Sin datos</div>
+    </section>
+
+    <footer class="footer">
+        <div class="nav-item">Hogar</div>
+        <div class="nav-item active">Tarea</div>
+        <div class="nav-item">Equipo</div>
+        <div class="nav-item">VIP</div>
+        <div class="nav-item">A mí</div>
+    </footer>
+
+    <div class="floating-buttons">
+        <button class="chat-button"></button>
+        <button class="email-button"></button>
+    </div>
+</body>
+</html>
