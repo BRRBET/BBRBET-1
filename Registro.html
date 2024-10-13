@@ -6,21 +6,40 @@
     <title>Registro</title>
     <style>
         body {
-            background-color: #ffffff;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #b2f2bb, #69b578);
+            background-size: 100% 100%;
+            height: 100vh;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            position: relative;
+            overflow: hidden;
         }
+
+        /* Generar los puntos blancos esparcidos */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(white 2px, transparent 2px);
+            background-size: 20px 20px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
         .container {
             background-color: #4CAF50;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
+            z-index: 2;
+            position: relative;
         }
         h2 {
             color: white;
