@@ -14,60 +14,74 @@
         .header {
             background-color: #00b300;
             color: white;
-            padding: 15px;
+            padding: 10px;
             text-align: center;
         }
-        .header img {
-            max-width: 100px;
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .header p {
+            font-size: 0.9em;
         }
         .buttons {
             display: flex;
             justify-content: center;
-            margin: 20px 0;
+            margin: 10px 0;
         }
         .buttons button {
             background-color: #00b300;
             color: white;
             border: none;
-            padding: 10px 20px;
-            margin: 0 10px;
+            padding: 5px;
+            margin: 0 5px;
             cursor: pointer;
             border-radius: 5px;
+            font-size: 0.8em;
+        }
+        .buttons img {
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+            margin-right: 5px;
         }
         .content {
             padding: 10px;
         }
         .task-room {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 10px;
-            margin: 20px 0;
+            margin: 10px 0;
         }
         .task-item {
             background-color: white;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 0.9em;
         }
         .task-item img {
-            max-width: 50px;
+            max-width: 40px;
             margin-bottom: 10px;
         }
         .task-item button {
             background-color: #00b300;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 5px;
             width: 100%;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 0.8em;
         }
         .footer {
             background-color: #00b300;
             color: white;
-            padding: 10px;
+            padding: 5px;
             text-align: center;
+            font-size: 0.8em;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -82,17 +96,29 @@
     </div>
 
     <div class="buttons">
-        <button onclick="window.location.href='recargar.html'">Recargar</button>
-        <button onclick="window.location.href='retirar.html'">Retirar</button>
-        <button onclick="window.location.href='perfil.html'">Perfil de la empresa</button>
+        <button onclick="window.location.href='recargar.html'">
+            <img src="recargar.png" alt="Recargar">Recargar
+        </button>
+        <button onclick="window.location.href='retirar.html'">
+            <img src="retirar.png" alt="Retirar">Retirar
+        </button>
+        <button onclick="window.location.href='perfil.html'">
+            <img src="perfil.png" alt="Perfil">Perfil
+        </button>
+        <button onclick="window.location.href='equipo.html'">
+            <img src="equipo.png" alt="Equipo">Equipo
+        </button>
+        <button onclick="window.location.href='vip.html'">
+            <img src="vip.png" alt="VIP">VIP
+        </button>
     </div>
 
     <div class="content">
         <h2>Actividades</h2>
-        <p>Toma acción! La plataforma fue promocionada a Facebook, WhatsApp y TikTok, y el equipo de creación alcanzó los 50 miembros de nivel A</p>
-        <p>35.00 USDT</p>
+        <p style="font-size: 0.9em;">Toma acción! La plataforma fue promocionada a Facebook, WhatsApp y TikTok, y el equipo de creación alcanzó los 50 miembros de nivel A</p>
+        <p style="font-size: 1em; font-weight: bold;">35.00 USDT</p>
 
-        <h3>Cuenta regresiva para restablecer tareas: 23:58:09</h3>
+        <h3 style="font-size: 1em; text-align: center;">Cuenta regresiva: 23:58:09</h3>
 
         <h2>Sala de tareas</h2>
         <div class="task-room">
@@ -134,4 +160,4 @@
     </div>
 
 </body>
-  </html>
+</html>
