@@ -29,19 +29,27 @@
             font-size: 14px;
         }
 
+        /* Contenedor del balance y recarga, centrado */
         .balance-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
             padding: 10px;
             background-color: #27b84d;
             color: white;
-            margin: 5px 10px;
+            margin: 10px;
             border-radius: 8px;
+            flex-wrap: wrap;
+        }
+
+        .balance-item {
+            text-align: center;
         }
 
         .balance-item h3 {
             margin: 0;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         .balance-item p {
@@ -49,42 +57,47 @@
             font-size: 14px;
         }
 
+        /* Botones más pequeños y centrados */
         .buttons {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            gap: 10px;
             margin: 10px 5px;
         }
 
         .button {
             background-color: #1baf50;
             color: white;
-            padding: 8px;
+            padding: 6px 12px;
             text-align: center;
             border-radius: 6px;
-            flex: 1;
-            margin: 0 3px;
             font-size: 14px;
             text-decoration: none;
+            width: 120px;
         }
 
         .button:hover {
             background-color: #159e42;
         }
 
+        /* Opciones de cambiar contraseña y desconectar centradas */
         .secondary-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
             padding: 10px;
         }
 
         .option {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            gap: 8px;
         }
 
         .option img {
             width: 20px;
             height: 20px;
-            margin-right: 8px;
         }
 
         .option a {
@@ -93,6 +106,7 @@
             font-size: 14px;
         }
 
+        /* Barra de navegación fija al pie */
         .footer-nav {
             display: flex;
             justify-content: space-around;
@@ -108,7 +122,7 @@
             border: none;
             color: white;
             text-align: center;
-            font-size: 0.65em; /* Tamaño reducido */
+            font-size: 0.65em;
         }
 
         .footer-nav img {
@@ -118,21 +132,21 @@
             margin: 0 auto 3px;
         }
 
-        /* Estilo para dispositivos móviles */
+        /* Ajuste para pantallas pequeñas */
         @media (max-width: 600px) {
             .balance-container {
                 flex-direction: column;
                 align-items: center;
-                gap: 8px;
             }
 
             .buttons {
                 flex-direction: column;
+                align-items: center;
             }
 
             .button {
-                border-radius: 15px;
-                margin: 5px 0;
+                width: 100%;
+                max-width: 150px;
             }
         }
     </style>
