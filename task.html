@@ -3,70 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WKLLLOHONG</title>
+    <title>IFS Tareas</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4; /* Color de fondo claro */
-            overflow-y: auto; /* Permite el desplazamiento */
-            color: #333; /* Color de texto principal */
+            background-color: #f4f4f4;
+            overflow-y: auto;
         }
         .container {
-            max-width: 800px; /* Ancho máximo para el contenido */
-            margin: 20px auto; /* Centra el contenido y agrega margen superior e inferior */
-            padding: 20px;
-            background-color: #fff; /* Fondo blanco para el contenido */
-            border-radius: 10px; /* Bordes redondeados */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            text-align: center;
+            padding-top: 20px;
         }
         .header {
-            padding: 20px;
-            background-color: #27ae60; /* Verde más oscuro para el encabezado */
-            border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
-            text-align: center; /* Centrar texto */
+            background-color: #00b300;
+            padding: 15px;
+            color: white;
         }
         .header h1 {
             margin: 0;
-            font-size: 2em; /* Aumentar tamaño de fuente */
-            color: #fff; /* Color de texto blanco */
         }
-        .task-box {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #e7f9e8; /* Fondo verde claro para las tareas */
-            border-radius: 8px;
-            display: inline-block;
-            width: 100%; /* Ancho completo */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para la caja */
+        .task-info {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            color: white;
         }
-        .task-box h2 {
+        .task-info div {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+        }
+        .task-info div h2 {
             margin: 0;
-            font-size: 1.5em; /* Tamaño de fuente aumentado */
-            color: #2c3e50; /* Color de texto para las tareas */
+            font-size: 1.5em;
+        }
+        .task-info div span {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .task-info {
+            background-color: #00b300;
+            border-radius: 8px;
+            padding: 15px 10px;
+            margin: 20px 15px;
+            color: white;
+        }
+        .reset-task {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .timer {
+            font-size: 1.2em;
+            font-weight: bold;
         }
         .task-status {
             display: flex;
             justify-content: center;
             margin: 20px 0;
+            font-size: 1.1em;
         }
         .task-status div {
             margin: 0 20px;
         }
-        .task-status button {
-            padding: 10px 15px; /* Relleno para los botones */
-            background-color: #27ae60; /* Color de fondo de botones */
-            border: none;
-            color: white;
-            border-radius: 5px; /* Bordes redondeados */
-            cursor: pointer; /* Cambia el cursor al pasar el mouse */
-            transition: background-color 0.3s; /* Transición suave */
-        }
-        .task-status button:hover {
-            background-color: #219150; /* Color de fondo al pasar el mouse */
-        }
-        .spacer {
-            height: 120px; /* Espaciador para contenido */
+        .no-data {
+            color: #ccc;
+            margin-top: 20px;
+            font-size: 1.2em;
         }
         .footer-nav {
             display: flex;
@@ -74,79 +77,78 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: #00b300; /* Color verde para la barra inferior */
+            background-color: #00b300;
             padding: 10px 0;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra en la barra inferior */
         }
         .footer-nav button {
             background-color: transparent;
             border: none;
             color: white;
             text-align: center;
-            font-size: 0.9em; /* Tamaño de fuente ajustado */
-            cursor: pointer; /* Cambia el cursor al pasar el mouse */
+            font-size: 0.9em;
+            cursor: pointer;
         }
         .footer-nav img {
-            width: 24px; /* Aumentar tamaño de imagen */
+            width: 24px;
             height: auto;
-            border-radius: 50%; /* Imágenes circulares */
+            border-radius: 50%;
             margin: 0 auto 5px;
         }
         .footer-nav button:hover {
-            color: #d1f1d1; /* Color al pasar el mouse */
+            color: #d1f1d1;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>IFS</h1>
+    </div>
 
     <div class="container">
-        <div class="header">
-            <h1>WKLLLOHONG</h1>
-        </div>
-        
-        <div class="task-box">
-            <h2>Todas las tareas para hoy: <span>0</span></h2>
-            <h2>Las tareas pendientes de hoy: <span>0</span></h2>
-        </div>
-        
-        <div class="task-status">
+        <div class="task-info">
             <div>
-                <button>En curso</button>
+                <h2>Todas las tareas para hoy</h2>
+                <span>1</span>
             </div>
             <div>
-                <button>Terminado</button>
+                <h2>Las tareas pendientes de hoy</h2>
+                <span>0</span>
             </div>
-        </div>
-        
-        <div class="task-box">
-            <p>Sin datos</p>
         </div>
 
-        <div class="spacer"></div> <!-- Espaciador añadido -->
+        <div class="reset-task">
+            Restablecer tarea <span class="timer">11:11:05</span>
+        </div>
+
+        <div class="task-status">
+            <div>En curso</div>
+            <div>Terminado</div>
+        </div>
+
+        <div class="no-data">Sin datos</div>
     </div>
 
     <div class="footer-nav">
-        <button onclick="window.location.href='Home.html'">
+        <button>
             <img src="https://github.com/user-attachments/assets/752a7744-b455-422d-9d52-32b126d85812" alt="Home">
             Hogar
         </button>
-        <button onclick="window.location.href='task.html'">
-            <img src="https://github.com/user-attachments/assets/81a14dee-42c2-44f9-9ec2-537d9e0dd7b5" alt="Tareas">
+        <button>
+            <img src="https://github.com/user-attachments/assets/81a14dee-42c2-44f9-9ec2-537d9e0dd7b5" alt="Tarea">
             Tarea
         </button>
-        <button onclick="window.location.href='Equipo.html'">
+        <button>
             <img src="https://github.com/user-attachments/assets/ade18c9f-963e-40c7-90b8-3084eaf31a6e" alt="Equipo">
             Equipo
         </button>
-        <button onclick="window.location.href='vip.html'">
+        <button>
             <img src="https://github.com/user-attachments/assets/4c14ccb6-b134-401d-88ba-3b4e7d7a0c5f" alt="VIP">
             VIP
         </button>
-        <button onclick="window.location.href='Perfil.html'">
+        <button>
             <img src="https://github.com/user-attachments/assets/0b28dc7e-fe62-4d26-9679-8ccc0a149bda" alt="Perfil">
             A mí
         </button>
     </div>
-
 </body>
 </html>
