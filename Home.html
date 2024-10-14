@@ -11,8 +11,8 @@
             background-color: #f4f4f4;
             overflow-y: auto; /* Permite el desplazamiento */
         }
-        .spacer{
-heigth: 15000px;
+        .spacer {
+            height: 15000px; /* Espaciador para contenido */
         }
         .header {
             background-color: #00b300;
@@ -115,61 +115,40 @@ heigth: 15000px;
             margin: 0 auto 5px;
         }
         .tasks {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 10px; /* Espacio entre columnas */
-    padding: 10px;
-}
-
-.task-card {
-    background-color: #f9f9f9;
-    margin: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 10px;
-            }/* Sala de Tareas */
-.tasks {
-    display: grid; /* Utiliza grid para las columnas */
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 10px; /* Espacio entre columnas */
-    padding: 10px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.task-card {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 10px;
-}
-
-.task-card img {
-    width: 70px; /* Tamaño de la imagen */
-    height: 70px;
-    border-radius: 50%; /* Imagen redondeada */
-    margin-bottom: 10px;
-}
-
-.task-card h3 {
-    font-size: 0.9em;
-    margin: 0;
-}
-
-.task-card p {
-    font-size: 0.9em;
-    margin: 5px 0;
-}
-
-.task-card .price {
-    color: green;
-    font-weight: bold;
-}
-
+            display: grid; /* Utiliza grid para las columnas */
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            gap: 10px; /* Espacio entre columnas */
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .task-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+        }
+        .task-card img {
+            width: 70px; /* Tamaño de la imagen */
+            height: 70px;
+            border-radius: 50%; /* Imagen redondeada */
+            margin-bottom: 10px;
+        }
+        .task-card h3 {
+            font-size: 0.9em;
+            margin: 0;
+        }
+        .task-card p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        .task-card .price {
+            color: green;
+            font-weight: bold;
+        }
         /* Galería de imágenes deslizable */
         .image-slider {
             display: flex;
@@ -186,7 +165,6 @@ heigth: 15000px;
             margin-right: 10px;
             border-radius: 10px;
         }
-
     </style>
 </head>
 <body>
@@ -215,7 +193,7 @@ heigth: 15000px;
     </div>
 
     <div class="content">
-        <img src="banner.png" alt="IFS Banner">
+        <img src="https://github.com/user-attachments/assets/a12d1b74-6eb4-4558-9d47-00b104b8a7fc" alt="IFS Banner">
     </div>
 
     <div class="activities">
@@ -236,31 +214,84 @@ heigth: 15000px;
     <!-- Sala de tareas -->
     <div class="tasks">
         <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 0">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 1">
+            <h3>VIP-1</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$15.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 2">
             <h3>VIP-1,5</h3>
             <p>Comisión de pedido</p>
             <p class="price">$60</p>
         </div>
         <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 1">
-            <h3>VIP-2</h3>
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 3">
+            <h3>
+                VIP-2</h3>
             <p>Comisión de pedido</p>
             <p class="price">$100.00</p>
         </div>
         <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 1">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 4">
             <h3>VIP-3</h3>
             <p>Comisión de pedido</p>
             <p class="price">$200.00</p>
         </div>
         <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 1">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 5">
             <h3>VIP-4</h3>
             <p>Comisión de pedido</p>
             <p class="price">$300.00</p>
         </div>
-       
-        <!-- Añade más tarjetas de VIP si es necesario -->
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 6">
+            <h3>VIP-5</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$400.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 7">
+            <h3>VIP-6</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$500.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 8">
+            <h3>VIP-7</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$600.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 9">
+            <h3>VIP-8</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$700.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 10">
+            <h3>VIP-9</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$800.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 11">
+            <h3>VIP-10</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$900.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 12">
+            <h3>VIP-11</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$1000.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 12">
+            <h3>VIP-12</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$1200.00</p>
+        </div>
     </div>
 
     <div class="footer-nav">
@@ -285,7 +316,6 @@ heigth: 15000px;
             A mí
         </button>
     </div>
-<div class="spacer"></div
+    <div class="spacer"></div>
 </body>
 </html>
-            
