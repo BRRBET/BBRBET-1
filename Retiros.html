@@ -36,15 +36,19 @@
             font-size: 14px;
         }
 
-        .balance {
-            text-align: center;
-            margin: 20px 0;
+        .form-group {
+            margin-bottom: 15px;
         }
 
-        .balance h2 {
-            margin: 0;
-            color: green;
-            font-size: 32px;
+        input[type="text"],
+        input[type="password"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
         }
 
         .withdraw-method {
@@ -54,19 +58,6 @@
             padding: 5px;
             border-radius: 5px;
             font-weight: bold;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
         }
 
         .fees {
@@ -98,8 +89,9 @@
             <p>retiro 24 horas</p>
         </div>
 
-        <div class="balance">
-            <h2>14.00 USDT</h2>
+        <div class="form-group">
+            <label>Balance total</label>
+            <input type="number" id="balance" placeholder="14.00" min="0" step="0.01">
         </div>
 
         <div class="withdraw-method">Método de retiro: TRC20-USDT</div>
@@ -110,12 +102,12 @@
 
         <div class="form-group">
             <label>Dirección de retiro</label>
-            <input type="text" placeholder="Ingresa la dirección TRC20">
+            <input type="text" id="direccion" placeholder="Ingresa la dirección TRC20">
         </div>
 
         <div class="form-group">
             <label>Contraseña</label>
-            <input type="password" placeholder="Ingresa tu contraseña">
+            <input type="password" id="password" placeholder="Ingresa tu contraseña">
         </div>
 
         <div class="fees">
@@ -123,7 +115,21 @@
             <span>Realmente recibido: 0 USDT</span>
         </div>
 
-        <button class="confirm-btn">Confirmar</button>
+        <button class="confirm-btn" onclick="validarRetiro()">Confirmar</button>
     </div>
+
+    <script>
+        function validarRetiro() {
+            const balance = parseFloat(document.getElementById('balance').value);
+            const MIN_RETIRO = 7.5;
+
+            if (isNaN(balance) || balance < MIN_RETIRO) {
+                alert('El balance debe ser al menos 7.5 USDT para poder retirar.');
+            } else {
+                alert('Retiro exitoso.');
+                // Aquí puedes agregar lógica adicional para procesar el retiro
+            }
+        }
+    </script>
 </body>
 </html>
