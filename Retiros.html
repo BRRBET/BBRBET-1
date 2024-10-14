@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Retiro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            width: 90%;
+            max-width: 400px;
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .balance {
+            font-size: 24px;
+            color: green;
+            font-weight: bold;
+        }
+        .button {
+            background-color: #00ff00;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+        .button:active {
+            background-color: #00cc00;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            font-size: 14px;
+            color: #333;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-group .password-input {
+            position: relative;
+        }
+        .input-group .password-input input {
+            padding-right: 40px;
+        }
+        .input-group .password-input img {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 25px;
+            cursor: pointer;
+        }
+        .fees {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .header {
+            background-color: #007f00;
+            padding: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            width: 25px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://github.com/user-attachments/assets/03e19d31-42dd-4e52-91f2-b5690877b591" alt="Back Arrow" onclick="window.location.href='Recargas.html';">
+        <h1>Cuenta Retiro</h1>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Balance total</h2>
+            <div class="balance">0.00 USDT</div>
+            <div class="input-group">
+                <label>Método de retiro:</label>
+                <button class="button" disabled>TRC20-USDT</button>
+            </div>
+            <div class="input-group">
+                <label>Cuota</label>
+                <input type="text" placeholder="10.000 - 1000000.00" disabled>
+            </div>
+            <div class="input-group">
+                <label>Dirección de retiro</label>
+                <input type="text" placeholder="Ingrese su dirección de retiro">
+            </div>
+            <div class="input-group password-input">
+                <label>Contraseña</label>
+                <input type="password" placeholder="Ingrese su contraseña">
+                <img src="https://github.com/user-attachments/assets/ad08cf9f-465c-431a-a42d-99d2b2e3321f" alt="Show Password">
+            </div>
+            <div class="fees">
+                <span>Honorarios</span>
+                <span>0 USDT</span>
+            </div>
+            <div class="fees">
+                <span>Realmente recibido</span>
+                <span>0 USDT</span>
+            </div>
+            <button class="button" onclick="alert('En breve confirmaremos su depósito, sea paciente.');">Confirmar</button>
+        </div>
+    </div>
+
+</body>
+</html>
