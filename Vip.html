@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBRBET - VIP Niveles</title>
+    <title>BBRBET - Niveles VIP</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra horizontalmente el contenido */
         }
         .header {
             background-color: #00b300;
             padding: 15px;
             text-align: center;
             color: white;
+            width: 100%; /* Hace que el header ocupe todo el ancho */
         }
         .vip-card {
             background-color: white;
@@ -22,23 +26,39 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex; /* Usar flex para alinear elementos */
+            align-items: center; /* Centra verticalmente los elementos */
+            width: 90%; /* Ancho de las tarjetas más pequeño */
+            max-width: 300px; /* Limita el ancho máximo de las tarjetas */
         }
         .vip-card img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            width: 50px; /* Ancho de la imagen redonda */
+            height: 50px; /* Alto de la imagen redonda */
+            border-radius: 50%; /* Hace la imagen redonda */
+            margin-right: 15px; /* Espacio a la derecha de la imagen */
+        }
+        .vip-label {
+            background-color: gold; /* Color dorado para la etiqueta */
+            color: black; /* Color del texto */
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            position: absolute; /* Posiciona la etiqueta */
+            top: 10px;
+            left: 10px;
+            z-index: 1; /* Asegura que la etiqueta esté encima */
         }
         .vip-card h3 {
-            margin: 10px 0;
+            margin: 5px 0;
         }
         .vip-card p {
-            margin: 5px 0;
+            margin: 3px 0;
         }
         .vip-card button {
             background-color: #00b300;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
             width: 100%;
@@ -78,23 +98,31 @@
     </div>
 
     <div class="vip-card">
-        <h3>VIP-1</h3>
-        <p>Tareas diarias: 1</p>
-        <p>Interés simple: 7.5 USDT</p>
-        <p>Ganancia diaria: 7.5 USDT</p>
-        <p>Beneficio total: 225 USDT</p>
-        <p>Desbloquear por: 15 USDT</p>
-        <button onclick="window.location.href='vip1.html'">Desbloquear ahora</button>
+        <div class="vip-label">VIP-1</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-1 Image">
+        <div>
+            <h3>VIP-1</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 7.5 USDT</p>
+            <p>Ganancia diaria: 7.5 USDT</p>
+            <p>Beneficio total: 225 USDT</p>
+            <p>Desbloquear por: 15 USDT</p>
+            <button onclick="window.location.href='vip1.html'">Desbloquear ahora</button>
+        </div>
     </div>
 
     <div class="vip-card">
-        <h3>VIP-2</h3>
-        <p>Tareas diarias: 1</p>
-        <p>Interés simple: 20 USDT</p>
-        <p>Ganancia diaria: 20 USDT</p>
-        <p>Beneficio total: 600 USDT</p>
-        <p>Desbloquear por: 60 USDT</p>
-        <button onclick="window.location.href='vip2.html'">Desbloquear ahora</button>
+        <div class="vip-label">VIP-2</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-2 Image">
+        <div>
+            <h3>VIP-2</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 20 USDT</p>
+            <p>Ganancia diaria: 20 USDT</p>
+            <p>Beneficio total: 600 USDT</p>
+            <p>Desbloquear por: 60 USDT</p>
+            <button onclick="window.location.href='vip2.html'">Desbloquear ahora</button>
+        </div>
     </div>
 
     <div class="spacer"></div> <!-- Espaciador para el contenido -->
