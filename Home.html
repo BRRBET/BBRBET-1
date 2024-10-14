@@ -3,88 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFS</title>
+    <title>IFS - Plataforma</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            overflow-y: scroll;
+            overflow-y: scroll; /* Permite el desplazamiento */
         }
         .header {
-            background-color: #008000;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-        .logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0 auto;
-        }
-        .task-room {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            padding: 10px;
-        }
-        .task-card {
-            background-color: white;
+            background-color: #00b300;
             padding: 15px;
+            color: white;
             text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .task-card img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%; /* Imagen redondeada */
+            vertical-align: middle;
         }
-        .price {
-            color: #008000;
-            font-weight: bold;
+        .header h1 {
+            display: inline-block;
+            font-size: 1.2em;
+            margin: 0 10px;
+            vertical-align: middle;
         }
-        .footer-nav {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
+        .header p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #e0e0e0;
+        }
+        .rating {
             display: flex;
-            justify-content: space-around;
-            background-color: #008000;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .rating img {
+            width: 20px;
+            height: auto;
+            margin-right: 5px;
+        }
+        .rating span {
+            color: #ffd700;
+            font-size: 1.1em;
+            margin-left: 5px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
             padding: 10px;
         }
-        .footer-nav button {
-            background: none;
+        .buttons button {
+            background-color: #00b300;
             border: none;
             color: white;
-            font-size: 12px;
+            padding: 8px 15px; /* Tamaño reducido */
+            margin: 0 5px;
+            border-radius: 10px;
+            font-size: 0.8em; /* Tamaño reducido */
+            display: flex;
+            align-items: center;
+        }
+        .buttons button img {
+            width: 15px; /* Tamaño reducido */
+            height: auto;
+            margin-right: 5px;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+        }
+        .activities {
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .activities h2 {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .activities p {
+            font-size: 0.9em;
+        }
+        .countdown {
+            font-weight: bold;
+            font-size: 1.2em;
             text-align: center;
+            margin: 10px 0;
+        }
+        .footer-nav {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #00b300;
+            padding: 10px 0;
+        }
+        .footer-nav button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            text-align: center;
+            font-size: 0.7em; /* Tamaño reducido */
         }
         .footer-nav img {
-            width: 25px;
-            height: 25px;
-            margin-bottom: 5px;
+            width: 20px; /* Tamaño reducido */
+            height: auto;
+            display: block;
+            margin: 0 auto 5px;
         }
-        .footer-nav button:focus {
-            outline: none;
+        /* Sala de Tareas */
+        .tasks {
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .task-card {
+            width: 45%; /* Asegura que haya dos columnas */
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+        }
+        .task-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%; /* Imagen redondeada */
+            margin-bottom: 10px;
+        }
+        .task-card h3 {
+            font-size: 0.9em;
+            margin: 0;
+        }
+        .task-card p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        .task-card .price {
+            color: green;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <img src="https://github.com/user-attachments/assets/4852b991-9710-4ff2-aec4-77ef9d01ad45" alt="IFS Logo" class="logo">
+        <img src="https://github.com/user-attachments/assets/4852b991-9710-4ff2-aec4-77ef9d01ad45" alt="IFS Logo">
         <h1>IFS</h1>
         <p>Save your money & time</p>
     </div>
 
-    <div class="task-room">
+    <div class="rating">
+        <img src="star.png" alt="Star">
+        <span>5.0</span>
+    </div>
+
+    <div class="buttons">
+        <button onclick="window.location.href='recargar.html'">
+            <img src="recargar.png" alt="Recargar">Recargar
+        </button>
+        <button onclick="window.location.href='retirar.html'">
+            <img src="retirar.png" alt="Retirar">Retirar
+        </button>
+        <button onclick="window.location.href='perfil.html'">
+            <img src="perfil.png" alt="Perfil">Perfil
+        </button>
+    </div>
+
+    <div class="content">
+        <img src="banner.png" alt="IFS Banner">
+    </div>
+
+    <div class="activities">
+        <h2>Actividades</h2>
+        <p>✨ ¡Toma acción! La plataforma fue promocionada a Facebook, WhatsApp y TikTok, y el equipo de creación alcanzó los 50 miembros de nivel A.</p>
+        <p style="color: green; font-weight: bold;">35.00 USDT</p>
+    </div>
+
+    <div class="countdown">23:58:09</div>
+
+    <!-- Sala de tareas -->
+    <div class="tasks">
         <div class="task-card">
             <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 0">
             <h3>VIP-0</h3>
@@ -97,72 +208,7 @@
             <p>Comisión de pedido</p>
             <p class="price">$10.00</p>
         </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 2">
-            <h3>VIP-2</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$36.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 3">
-            <h3>VIP-3</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$99.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 4">
-            <h3>VIP-4</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$231.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 5">
-            <h3>VIP-5</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$451.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 6">
-            <h3>VIP-6</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$600.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 7">
-            <h3>VIP-7</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$700.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 8">
-            <h3>VIP-8</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$800.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 9">
-            <h3>VIP-9</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$850.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 10">
-            <h3>VIP-10</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$1,000.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 11">
-            <h3>VIP-11</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$1,200.00</p>
-        </div>
-        <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 12">
-            <h3>VIP-12</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$1,500.00</p>
-        </div>
+        <!-- Añade más tarjetas de VIP como las anteriores -->
     </div>
 
     <div class="footer-nav">
@@ -187,6 +233,5 @@
             A mí
         </button>
     </div>
-
 </body>
 </html>
