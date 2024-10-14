@@ -89,12 +89,6 @@
         .activities p {
             font-size: 0.9em;
         }
-        .countdown {
-            font-weight: bold;
-            font-size: 1.2em;
-            text-align: center;
-            margin: 10px 0;
-        }
         .footer-nav {
             display: flex;
             justify-content: space-around;
@@ -155,6 +149,24 @@
             color: green;
             font-weight: bold;
         }
+
+        /* Galería de imágenes deslizable */
+        .image-slider {
+            display: flex;
+            overflow-x: scroll;
+            white-space: nowrap;
+            padding: 10px 0;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+        .image-slider img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -192,15 +204,16 @@
         <p style="color: green; font-weight: bold;">35.00 USDT</p>
     </div>
 
-    <div class="countdown">23:58:09</div>
+    <!-- Galería deslizable de imágenes -->
+    <div class="image-slider">
+        <img src="https://via.placeholder.com/150x100?text=Image+1" alt="Imagen 1">
+        <img src="https://via.placeholder.com/150x100?text=Image+2" alt="Imagen 2">
+        <img src="https://via.placeholder.com/150x100?text=Image+3" alt="Imagen 3">
+        <img src="https://via.placeholder.com/150x100?text=Image+4" alt="Imagen 4">
+        <img src="https://via.placeholder.com/150x100?text=Image+5" alt="Imagen 5">
+    </div>
 
     <!-- Sala de tareas -->
-    <div class="task-card">
-            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 1">
-            <h3>VIP-1</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$15.00</p>
-    </div>
     <div class="tasks">
         <div class="task-card">
             <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 0">
@@ -232,7 +245,7 @@
             <p>Comisión de pedido</p>
             <p class="price">$400.00</p>
         </div>
-        <!-- Añade más tarjetas de VIP como las anteriores -->
+        <!-- Añade más tarjetas de VIP si es necesario -->
     </div>
 
     <div class="footer-nav">
@@ -257,5 +270,7 @@
             A mí
         </button>
     </div>
+
 </body>
 </html>
+            
