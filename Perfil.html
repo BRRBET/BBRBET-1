@@ -9,58 +9,61 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
         }
 
         header {
             background-color: #1baf50;
             color: white;
-            padding: 15px;
+            padding: 10px;
             text-align: center;
-        }
-
-        .account-info {
-            margin-top: 5px;
-            color: white;
         }
 
         .account-info h2 {
             margin: 5px 0;
-            font-size: 18px;
+            font-size: 14px;
         }
 
         .account-info p {
             margin: 0;
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .balance-container {
             display: flex;
             justify-content: space-around;
-            padding: 15px;
+            padding: 10px;
             background-color: #27b84d;
             color: white;
+            margin: 5px 10px;
+            border-radius: 8px;
         }
 
         .balance-item h3 {
             margin: 0;
-            font-size: 24px;
+            font-size: 20px;
+        }
+
+        .balance-item p {
+            margin: 0;
+            font-size: 12px;
         }
 
         .buttons {
             display: flex;
             justify-content: space-around;
-            margin: 15px 10px;
+            margin: 10px 5px;
         }
 
         .button {
             background-color: #1baf50;
             color: white;
-            padding: 12px;
+            padding: 8px;
             text-align: center;
-            border-radius: 8px;
+            border-radius: 6px;
             flex: 1;
-            margin: 0 5px;
+            margin: 0 3px;
+            font-size: 14px;
             text-decoration: none;
         }
 
@@ -69,27 +72,27 @@
         }
 
         .secondary-options {
-            padding: 15px;
+            padding: 10px;
         }
 
         .option {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .option img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
         }
 
         .option a {
             text-decoration: none;
             color: black;
-            font-size: 16px;
+            font-size: 14px;
         }
-}
+
         .footer-nav {
             display: flex;
             justify-content: space-around;
@@ -97,21 +100,39 @@
             bottom: 0;
             width: 100%;
             background-color: #00b300;
-            padding: 10px 0;
+            padding: 8px 0;
         }
+
         .footer-nav button {
             background-color: transparent;
             border: none;
             color: white;
             text-align: center;
-            font-size: 0.7em; /* Tamaño reducido */
+            font-size: 0.65em; /* Tamaño reducido */
         }
+
         .footer-nav img {
-            width: 20px;
-            height: auto;
-            display: auto;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
-            margin: 0 auto 5px;
+            margin: 0 auto 3px;
+        }
+
+        /* Estilo para dispositivos móviles */
+        @media (max-width: 600px) {
+            .balance-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -139,7 +160,6 @@
     <div class="buttons">
         <a href="Recargas.html" class="button">Recargar</a>
         <a href="Retiros.html" class="button">Retirar</a>
-        
     </div>
 
     <div class="secondary-options">
