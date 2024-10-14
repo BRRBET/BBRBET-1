@@ -19,6 +19,19 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
         }
 
         h1 {
@@ -117,6 +130,10 @@
 </head>
 <body>
     <div class="container">
+        <a href="https://otra-pagina.com" class="logo">
+            <img src="https://github.com/user-attachments/assets/ad08cf9f-465c-431a-a42d-99d2b2e3321f" alt="Logo">
+        </a>
+
         <h1>Cuenta retiro</h1>
         <p class="subtitulo">retiro 24 horas</p>
 
@@ -131,7 +148,7 @@
 
         <div class="form-group">
             <label>Monto De Retiro</label>
-<input type="number" id="RetirosBalance" Placeholder="10.000">
+            <input type="number" id="RetirosBalance" placeholder="10.000">
         </div>
 
         <div class="form-group">
@@ -150,7 +167,12 @@
         </div>
 
         <button class="confirm-btn" onclick="validarRetiro()">Confirmar</button>
+    </div>
 
+    <div class="icon-buttons">
+        <button><img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Soporte" width="24"></button>
+        <button><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Mensaje" width="24"></button>
+    </div>
 
     <script>
         function validarRetiro() {
