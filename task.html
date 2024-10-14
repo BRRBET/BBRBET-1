@@ -19,15 +19,29 @@
             background-color: #00b300;
             padding: 15px;
             color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .header img {
+            width: 40px; /* Tamaño de la imagen */
+            height: 40px;
+            border-radius: 50%; /* Imagen en forma de círculo */
+            margin-right: 10px;
         }
         .header h1 {
+            font-size: 1.8em;
             margin: 0;
         }
         .task-info {
             display: flex;
             justify-content: space-around;
-            margin: 20px 0;
+            margin: 20px 10px;
             color: white;
+            background-color: #00b300;
+            border-radius: 8px;
+            padding: 10px 5px;
         }
         .task-info div {
             flex: 1;
@@ -36,22 +50,16 @@
         }
         .task-info div h2 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
         .task-info div span {
             font-size: 2em;
             font-weight: bold;
         }
-        .task-info {
-            background-color: #00b300;
-            border-radius: 8px;
-            padding: 15px 10px;
-            margin: 20px 15px;
-            color: white;
-        }
         .reset-task {
             font-size: 1.2em;
             margin-top: 10px;
+            color: #333;
         }
         .timer {
             font-size: 1.2em;
@@ -62,12 +70,13 @@
             justify-content: center;
             margin: 20px 0;
             font-size: 1.1em;
+            color: #333;
         }
         .task-status div {
             margin: 0 20px;
         }
         .no-data {
-            color: #ccc;
+            color: #aaa;
             margin-top: 20px;
             font-size: 1.2em;
         }
@@ -97,10 +106,25 @@
         .footer-nav button:hover {
             color: #d1f1d1;
         }
+
+        /* Estilos para pantallas móviles */
+        @media (max-width: 768px) {
+            .task-info {
+                flex-direction: column;
+                margin: 20px 10px;
+            }
+            .task-info div {
+                padding: 15px 0;
+            }
+            .footer-nav button {
+                font-size: 0.8em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="header">
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="IFS Logo">
         <h1>BBRBET</h1>
     </div>
 
@@ -150,5 +174,6 @@
             A mí
         </button>
     </div>
+
 </body>
 </html>
