@@ -33,7 +33,6 @@
         }
 
         .container {
-            
             background: linear-gradient(135deg, #b2f2bb, #69b578);
             padding: 20px;
             border-radius: 8px;
@@ -77,11 +76,29 @@
             text-decoration: underline;
         }
     </style>
+    <script>
+        let attemptCount = 0;
+
+        function validateLogin(event) {
+            event.preventDefault();  // Evitar que el formulario se envíe
+
+            // Incrementar contador de intentos
+            attemptCount++;
+
+            // Si los intentos son menores o iguales a 2, mostrar mensaje emergente
+            if (attemptCount <= 2) {
+                alert("Cuenta No Registrada.. Registrate para ingresar.");
+            } else {
+                // Después del segundo intento, permitir iniciar sesión
+                window.location.href = "Home.html";
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h2>Login</h2>
-        <form action="Home.html">
+        <form onsubmit="validateLogin(event)">
             <input type="email" placeholder="Correo" required>
             <input type="password" placeholder="Contraseña" required>
             <button type="submit">Iniciar sesión</button>
