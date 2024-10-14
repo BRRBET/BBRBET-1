@@ -37,6 +37,22 @@
             font-size: 0.9em;
             color: #e0e0e0;
         }
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .rating img {
+            width: 20px;
+            height: auto;
+            margin-right: 5px;
+        }
+        .rating span {
+            color: #ffd700;
+            font-size: 1.1em;
+            margin-left: 5px;
+        }
         .buttons {
             display: flex;
             justify-content: center;
@@ -46,22 +62,38 @@
             background-color: #00b300;
             border: none;
             color: white;
-            padding: 8px 15px;
+            padding: 8px 15px; /* Tamaño reducido */
             margin: 0 5px;
             border-radius: 10px;
-            font-size: 0.8em;
+            font-size: 0.8em; /* Tamaño reducido */
             display: flex;
             align-items: center;
         }
         .buttons button img {
-            width: 15px;
+            width: 15px; /* Tamaño reducido */
             height: auto;
             margin-right: 5px;
         }
         .content img {
             width: 100%;
             height: 30%;
-            border-radius: 10%;
+            border-radius:10%;
+        }
+        .activities {
+            
+            
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .activities h2 {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .activities p {
+            font-size: 0.9em;
         }
         .footer-nav {
             display: flex;
@@ -77,13 +109,68 @@
             border: none;
             color: white;
             text-align: center;
-            font-size: 0.7em;
+            font-size: 0.7em; /* Tamaño reducido */
         }
         .footer-nav img {
             width: 20px;
             height: auto;
+            display: auto;
             border-radius: 50%;
             margin: 0 auto 5px;
+        }
+        .tasks {
+            display: grid; /* Utiliza grid para las columnas */
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            gap: 10px; /* Espacio entre columnas */
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .task-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 10px;
+        }
+        .task-card img {
+            width: 70px; /* Tamaño de la imagen */
+            height: 70px;
+            border-radius: 50%; /* Imagen redondeada */
+            margin-bottom: 10px;
+        }
+        .task-card h3 {
+            font-size: 0.9em;
+            margin: 0;
+        }
+        .task-card p {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        .task-card .price {
+            color: green;
+            font-weight: bold;
+        }
+        /* Galería de imágenes deslizable */
+        .image-slider {
+            
+            
+    
+            display: flex;
+            overflow-x: scroll;
+            white-space: nowrap;
+            padding: 10px 0;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+        .image-slider img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 15px;
         }
     </style>
 </head>
@@ -95,6 +182,8 @@
         <p>Save your money & time</p>
     </div>
 
+    
+
     <div class="buttons">
         <button onclick="window.location.href='Recargas.html'">
             <img src="https://github.com/user-attachments/assets/30d1e050-0f9c-4277-a1aa-4302bf75db99" alt="Recargar">Recargar
@@ -104,8 +193,113 @@
         </button>
     </div>
 
+
     <div class="content">
         <img src="https://github.com/user-attachments/assets/a12d1b74-6eb4-4558-9d47-00b104b8a7fc" alt="IFS Banner">
+    </div>
+
+    <div class="activities">
+        <h2>Actividades</h2>
+        <p>✨ ¡Toma acción! La plataforma fue promocionada a Facebook, WhatsApp y TikTok, y el equipo de creación alcanzó los 50 miembros de nivel A. Recibiras VIP 1 contacta con el Administrador una vez cumplas los requisitos</p>
+        
+    </div>
+
+    <!-- Galería deslizable de imágenes -->
+    <div class="image-slider">
+        <img src="https://github.com/user-attachments/assets/fc8e0568-551d-46f6-bc2d-2d9f53211068" alt="Imagen 1">
+        <img src="https://github.com/user-attachments/assets/c9b28c09-b8cb-4948-a4a8-2cb530d0c343" alt="Imagen 2">
+        <img src="https://github.com/user-attachments/assets/627bbc48-3469-4529-8380-9fb8d2790257" alt="Imagen 3">
+        <img src="https://github.com/user-attachments/assets/49f89c47-1c67-49d6-abf6-7c9d89404ea0" alt="Imagen 4">
+        <img src="https://github.com/user-attachments/assets/4ef8ffce-7917-4424-aacb-bdac978381d4" alt="Imagen 5">
+    </div>
+
+    <!-- Sala de tareas -->
+    <div class="tasks">
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 1">
+            <h3>VIP-1</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$15.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 2">
+            <h3>VIP-1,5</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$60</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 3">
+            <h3>
+                VIP-2</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$100.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 4">
+            <h3>VIP-3</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$200.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 5">
+            <h3>VIP-4</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$300.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 6">
+            <h3>VIP-5</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$400.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 7">
+            <h3>VIP-6</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$500.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 8">
+            <h3>VIP-7</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$600.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 9">
+            <h3>VIP-8</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$700.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 10">
+            <h3>VIP-9</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$800.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 11">
+            <h3>VIP-10</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$900.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 12">
+            <h3>VIP-11</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$1000.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 12">
+            <h3>VIP-12</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$1200.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 12">
+            <h3>VIP-13</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$1500.00</p>
+        </div>
     </div>
 
     <div class="footer-nav">
@@ -130,7 +324,6 @@
             A mí
         </button>
     </div>
-
     <div class="spacer"></div>
 </body>
 </html>
