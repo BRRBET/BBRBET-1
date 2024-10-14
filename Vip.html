@@ -28,8 +28,9 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: flex; /* Usar flex para alinear elementos */
             align-items: center; /* Centra verticalmente los elementos */
-            width: 90%; /* Ancho de las tarjetas más pequeño */
-            max-width: 300px; /* Limita el ancho máximo de las tarjetas */
+            width: 85%; /* Ancho de las tarjetas más pequeño */
+            max-width: 250px; /* Limita el ancho máximo de las tarjetas */
+            position: relative; /* Necesario para el posicionamiento del cuadro de bloqueado */
         }
         .vip-card img {
             width: 50px; /* Ancho de la imagen redonda */
@@ -62,6 +63,18 @@
             border-radius: 15px;
             cursor: pointer;
             width: 100%;
+        }
+        .blocked-indicator {
+            background-color: red; /* Color rojo para indicar bloqueado */
+            color: white; /* Color del texto */
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            position: absolute; /* Posiciona el cuadro de bloqueado */
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%); /* Centra verticalmente el cuadro */
+            z-index: 1; /* Asegura que el cuadro esté encima */
         }
         .footer-nav {
             display: flex;
@@ -109,10 +122,11 @@
             <p>Desbloquear por: 15 USDT</p>
             <button onclick="window.location.href='vip1.html'">Desbloquear ahora</button>
         </div>
+        <div class="blocked-indicator">Bloqueado</div>
     </div>
 
     <div class="vip-card">
-        <div class="vip-label">BBRBET-VIPS</div>
+        <div class="vip-label">VIP-2</div>
         <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-2 Image">
         <div>
             <h3>VIP-2</h3>
@@ -123,6 +137,127 @@
             <p>Desbloquear por: 60 USDT</p>
             <button onclick="window.location.href='vip2.html'">Desbloquear ahora</button>
         </div>
+        <div class="blocked-indicator">Bloqueado</div>
+    </div>
+
+    <div class="vip-card">
+        <div class="vip-label">VIP-3</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-3 Image">
+        <div>
+            <h3>VIP-3</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 30 USDT</p>
+            <p>Ganancia diaria: 30 USDT</p>
+            <p>Beneficio total: 900 USDT</p>
+            <p>Desbloquear por: 90 USDT</p>
+            <button onclick="window.location.href='vip3.html'">Desbloquear ahora</button>
+        </div>
+        <div class="blocked-indicator">Bloqueado</div>
+    </div>
+
+    <div class="vip-card">
+        <div class="vip-label">VIP-4</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-4 Image">
+        <div>
+            <h3>VIP-4</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 50 USDT</p>
+            <p>Ganancia diaria: 50 USDT</p>
+            <p>Beneficio total: 1500 USDT</p>
+            <p>Desbloquear por: 150 USDT</p>
+            <button onclick="window.location.href='vip4.html'">Desbloquear ahora</button>
+        </div>
+        <div class="blocked-indicator">Bloqueado</div>
+    </div>
+
+    <div class="vip-card">
+        <div class="vip-label">VIP-5</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-5 Image">
+        <div>
+            <h3>VIP-5</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 70 USDT</p>
+            <p>Ganancia diaria: 70 USDT</p>
+            <p>Beneficio total: 2100 USDT</p>
+            <p>Desbloquear por: 210 USDT</p>
+            <button onclick="window.location.href='vip5.html'">Desbloquear ahora</button>
+        </div>
+        <div class="blocked-indicator">Bloqueado</div>
+    </div>
+
+    <div class="vip-card">
+        <div class="vip-label">VIP-6</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-6 Image">
+        <div>
+            <h3>VIP-6</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 90 USDT</p>
+            <p>Ganancia diaria: 90 USDT</p>
+            <p>Beneficio total: 2700 USDT</p>
+            <p>Desbloquear por: 270 USDT</p>
+            <button onclick="window.location.href='vip6.html'">Desbloquear ahora</button>
+        </div>
+        <div class="blocked-indicator">Bloqueado</div>
+    </div>
+
+    <div class="vip-card">
+        <div class="vip-label">VIP-7</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-7 Image">
+        <div>
+            <h3>VIP-7</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 120 USDT</p>
+            <p>Ganancia diaria: 120 USDT</p>
+            <p>Beneficio total: 3600 USDT</p>
+            <p>Desbloquear por: 360 USDT</p>
+            <button onclick="window.location.href='vip7.html'">Desbloquear ahora</button>
+        </div>
+        <div class="blocked-indicator">Bloqueado</div>
+    </div>
+
+    <div class="vip-card">
+        <div class="vip-label">VIP-8</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-8 Image">
+        <div>
+            <h3>VIP-8</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 150 USDT</p>
+            <p>Ganancia diaria: 150 USDT</p>
+            <p>Beneficio total: 4500 USDT</p>
+            <p>Desbloquear por: 450 USDT</p>
+            <button onclick="window.location.href='vip8.html'">Desbloquear ahora</button>
+        </div>
+        <div class="blocked-indicator">Bloqueado</div>
+    </div>
+
+    <div class="vip-card">
+        <div class="vip-label">VIP-9</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-9 Image">
+        <div>
+            <h3>VIP-9</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 200 USDT</p>
+            <p>Ganancia diaria: 200 USDT</p>
+            <p>Beneficio total: 6000 USDT</p>
+            <p>Desbloquear por: 600 USDT</p>
+            <button onclick="window.location.href='vip9.html'">Desbloquear ahora</button>
+        </div>
+        <div class="blocked-indicator">Bloqueado</div>
+    </div>
+
+    <div class="vip-card">
+        <div class="vip-label">VIP-10</div>
+        <img src="https://github.com/user-attachments/assets/a5d55ff0-785d-4d44-bcf1-729c75eb6fd4" alt="VIP-10 Image">
+        <div>
+            <h3>VIP-10</h3>
+            <p>Tareas diarias: 1</p>
+            <p>Interés simple: 250 USDT</p>
+            <p>Ganancia diaria: 250 USDT</p>
+            <p>Beneficio total: 7500 USDT</p>
+            <p>Desbloquear por: 750 USDT</p>
+            <button onclick="window.location.href='vip10.html'">Desbloquear ahora</button>
+        </div>
+        <div class="blocked-indicator">Bloqueado</div>
     </div>
 
     <div class="spacer"></div> <!-- Espaciador para el contenido -->
