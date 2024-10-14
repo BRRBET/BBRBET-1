@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFS - Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1baf50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .copy-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .stats-container {
+            background-color: #f0f0f0;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .stat {
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .stat h3 {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .stat p {
+            margin: 0;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .level-card {
+            background: linear-gradient(135deg, #7b61ff, #ff61b6);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .level-card h4 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+
+        .level-card p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .details-button {
+            background-color: black;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #00b300;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-nav button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            text-align: center;
+        }
+
+        .footer-nav img {
+            width: 24px;
+            height: 24px;
+            display: block;
+            margin: 0 auto 5px;
+        }
+
+        .language-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>IFS</h1>
+            <p>ID: <strong>103rp7</strong> <button class="copy-button">Copiar</button></p>
+            <p>Comparte tu enlace de referencia y comienza a ganar</p>
+            <p><a href="#">https://m.dpusdt.cc/#/register?...</a></p>
+        </div>
+        <img class="language-icon" src="https://img.icons8.com/ios-filled/50/000000/globe.png" alt="Idioma">
+    </header>
+
+    <div class="stats-container">
+        <div class="stat">
+            <h3>0</h3>
+            <p>Tamaño del equipo</p>
+        </div>
+        <div class="stat">
+            <h3>$0.00</h3>
+            <p>Recarga de equipo</p>
+        </div>
+        <div class="stat">
+            <h3>$0.00</h3>
+            <p>Retiro del equipo</p>
+        </div>
+        <div class="stat">
+            <h3>0</h3>
+            <p>Nuevo equipo</p>
+        </div>
+        <div class="stat">
+            <h3>0</h3>
+            <p>Recarga por primera vez</p>
+        </div>
+        <div class="stat">
+            <h3>0</h3>
+            <p>Primer retiro</p>
+        </div>
+    </div>
+
+    <div class="level-card">
+        <h4>LEV 1</h4>
+        <p>Registro/Válido: 0/0</p>
+        <p>Porcentaje de comisión: 10%</p>
+        <p>Ingresos totales: 0</p>
+        <button class="details-button">Detalles</button>
+    </div>
+
+    <div class="level-card">
+        <h4>LEV 2</h4>
+        <p>Registro/Válido: 0/0</p>
+        <p>Porcentaje de comisión: 3%</p>
+        <p>Ingresos totales: 0</p>
+        <button class="details-button">Detalles</button>
+    </div>
+
+    <div class="level-card">
+        <h4>LEV 3</h4>
+        <p>Registro/Válido: 0/0</p>
+        <p>Porcentaje de comisión: 2%</p>
+        <p>Ingresos totales: 0</p>
+        <button class="details-button">Detalles</button>
+    </div>
+
+    <div class="footer-nav">
+        <button>
+            <img src="https://img.icons8.com/ios-filled/50/000000/home.png" alt="Hogar">
+            Hogar
+        </button>
+        <button>
+            <img src="https://img.icons8.com/ios-filled/50/000000/task.png" alt="Tarea">
+            Tarea
+        </button>
+        <button>
+            <img src="https://img.icons8.com/ios-filled/50/000000/team.png" alt="Equipo">
+            Equipo
+        </button>
+        <button>
+            <img src="https://img.icons8.com/ios-filled/50/000000/vip.png" alt="VIP">
+            VIP
+        </button>
+        <button>
+            <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="Perfil">
+            A mí
+        </button>
+    </div>
+
+</body>
+</html>
