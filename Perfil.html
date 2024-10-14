@@ -12,30 +12,28 @@
             background-color: #f0f0f0;
         }
 
-        /* Encabezado */
         header {
             background-color: #1baf50;
             color: white;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
         }
 
         .account-info {
-            margin: 10px;
+            margin-top: 5px;
             color: white;
         }
 
         .account-info h2 {
-            margin: 0;
+            margin: 5px 0;
             font-size: 18px;
         }
 
         .account-info p {
-            margin: 5px 0;
-            font-size: 16px;
+            margin: 0;
+            font-size: 14px;
         }
 
-        /* Tarjetas de balance */
         .balance-container {
             display: flex;
             justify-content: space-around;
@@ -44,32 +42,23 @@
             color: white;
         }
 
-        .balance-item {
-            text-align: center;
-        }
-
         .balance-item h3 {
             margin: 0;
             font-size: 24px;
         }
 
-        .balance-item p {
-            margin: 5px 0;
-        }
-
-        /* Botones principales */
         .buttons {
             display: flex;
             justify-content: space-around;
-            margin: 10px;
+            margin: 15px 10px;
         }
 
         .button {
             background-color: #1baf50;
             color: white;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
-            border-radius: 5px;
+            border-radius: 8px;
             flex: 1;
             margin: 0 5px;
             text-decoration: none;
@@ -79,20 +68,19 @@
             background-color: #159e42;
         }
 
-        /* Opciones secundarias */
         .secondary-options {
-            padding: 10px;
+            padding: 15px;
         }
 
         .option {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .option img {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             margin-right: 10px;
         }
 
@@ -102,8 +90,7 @@
             font-size: 16px;
         }
 
-        /* Barra de navegación inferior */
-        .navbar {
+        .footer-nav {
             position: fixed;
             bottom: 0;
             left: 0;
@@ -114,18 +101,22 @@
             padding: 10px 0;
         }
 
-        .navbar a {
-            text-decoration: none;
+        .footer-nav button {
+            background: none;
+            border: none;
             color: white;
-            font-size: 14px;
             text-align: center;
+            font-size: 14px;
         }
 
-        .navbar a img {
-            width: 24px;
-            height: 24px;
-            display: block;
-            margin: 0 auto 5px;
+        .footer-nav img {
+            width: 28px;
+            height: 28px;
+            margin-bottom: 5px;
+        }
+
+        .footer-nav button:hover {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -134,7 +125,7 @@
     <header>
         <h1>IFS</h1>
         <div class="account-info">
-            <h2>hello,Cafeconpanxd053@gmail.com</h2>
+            <h2 id="user-email"></h2>
             <p>VIP-0</p>
         </div>
     </header>
@@ -158,7 +149,7 @@
 
     <div class="secondary-options">
         <div class="option">
-            <img src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="Cambiar">
+            <img src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="Cambiar contraseña">
             <a href="#">Cambiar la contraseña</a>
         </div>
         <div class="option">
@@ -167,13 +158,39 @@
         </div>
     </div>
 
-    <div class="navbar">
-        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/home.png" alt="Hogar">Hogar</a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/task.png" alt="Tarea">Tarea</a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/group.png" alt="Equipo">Equipo</a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/vip.png" alt="VIP">VIP</a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/wallet.png" alt="A mí">A mí</a>
+    <div class="footer-nav">
+        <button onclick="window.location.href='home.html'">
+            <img src="https://github.com/user-attachments/assets/752a7744-b455-422d-9d52-32b126d85812" alt="Home">
+            Hogar
+        </button>
+        <button onclick="window.location.href='tareas.html'">
+            <img src="https://github.com/user-attachments/assets/81a14dee-42c2-44f9-9ec2-537d9e0dd7b5" alt="Tareas">
+            Tarea
+        </button>
+        <button onclick="window.location.href='equipo.html'">
+            <img src="https://github.com/user-attachments/assets/ade18c9f-963e-40c7-90b8-3084eaf31a6e" alt="Equipo">
+            Equipo
+        </button>
+        <button onclick="window.location.href='vip.html'">
+            <img src="https://github.com/user-attachments/assets/4c14ccb6-b134-401d-88ba-3b4e7d7a0c5f" alt="VIP">
+            VIP
+        </button>
+        <button onclick="window.location.href='Perfil.html'">
+            <img src="https://github.com/user-attachments/assets/0b28dc7e-fe62-4d26-9679-8ccc0a149bda" alt="Perfil">
+            A mí
+        </button>
     </div>
+
+    <script>
+        // Genera un correo aleatorio y lo muestra
+        function generateRandomEmail() {
+            const user = `user-${Math.floor(Math.random() * 10000)}`;
+            const domain = '@gmail.com';
+            return user + domain;
+        }
+
+        document.getElementById('user-email').innerText = generateRandomEmail();
+    </script>
 
 </body>
 </html>
