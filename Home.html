@@ -3,274 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFS - Plataforma</title>
+    <title>IFS</title>
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            overflow-y: scroll;
         }
         .header {
-            background-color: #00b300;
-            padding: 15px;
-            color: white;
+            background-color: #008000;
+            padding: 20px;
             text-align: center;
-        }
-        .header img {
-            width: 50px;
-            height: auto;
-            vertical-align: middle;
-        }
-        .header h1 {
-            display: inline-block;
-            font-size: 1.2em;
-            margin: 0 10px;
-            vertical-align: middle;
-        }
-        .header p {
-            margin: 0;
-            font-size: 0.9em;
-            color: #e0e0e0;
-        }
-        .rating {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px 0;
-        }
-        .rating img {
-            width: 20px;
-            height: auto;
-            margin-right: 5px;
-        }
-        .rating span {
-            color: #ffd700;
-            font-size: 1.1em;
-            margin-left: 5px;
-        }
-        .buttons {
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-        }
-        .buttons button {
-            background-color: #00b300;
-            border: none;
             color: white;
-            padding: 10px 20px;
-            margin: 0 5px;
-            border-radius: 10px;
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
         }
-        .buttons button img {
-            width: 20px;
-            height: auto;
-            margin-right: 5px;
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto;
         }
-        .content img {
-            width: 100%;
-            height: auto;
-        }
-        .activities {
+        .task-room {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
             padding: 10px;
+        }
+        .task-card {
             background-color: white;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .activities h2 {
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-        .activities p {
-            font-size: 0.9em;
-        }
-        .countdown {
-            font-weight: bold;
-            font-size: 1.2em;
+            padding: 15px;
             text-align: center;
-            margin: 10px 0;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .task-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+        .price {
+            color: #008000;
+            font-weight: bold;
         }
         .footer-nav {
-            display: flex;
-            justify-content: space-around;
             position: fixed;
             bottom: 0;
-            width: 100%;
-            background-color: #00b300;
-            padding: 10px 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            background-color: #008000;
+            padding: 10px;
         }
         .footer-nav button {
-            background-color: transparent;
+            background: none;
             border: none;
             color: white;
+            font-size: 12px;
             text-align: center;
-            font-size: 0.8em;
         }
         .footer-nav img {
             width: 25px;
-            height: auto;
-            display: block;
-            margin: 0 auto 5px;
+            height: 25px;
+            margin-bottom: 5px;
         }
-        /* Sala de Tareas */
-        .tasks {
-            padding: 10px;
-            background-color: white;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .task-card {
-            width: 45%;
-            background-color: #f9f9f9;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 10px;
-        }
-        .task-card img {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 10px;
-        }
-        .task-card h3 {
-            font-size: 0.9em;
-            margin: 0;
-        }
-        .task-card p {
-            font-size: 0.9em;
-            margin: 5px 0;
-        }
-        .task-card .price {
-            color: green;
-            font-weight: bold;
-        }
-        /* Desplazamiento */
-        body {
-            overflow-y: scroll;
+        .footer-nav button:focus {
+            outline: none;
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <img src="logo.png" alt="IFS Logo">
+        <img src="https://github.com/user-attachments/assets/4852b991-9710-4ff2-aec4-77ef9d01ad45" alt="IFS Logo" class="logo">
         <h1>IFS</h1>
         <p>Save your money & time</p>
     </div>
 
-    <div class="rating">
-        <img src="star.png" alt="Star">
-        <span>5.0</span>
-    </div>
-
-    <div class="buttons">
-        <button onclick="window.location.href='recargar.html'">
-            <img src="recargar.png" alt="Recargar">Recargar
-        </button>
-        <button onclick="window.location.href='retirar.html'">
-            <img src="retirar.png" alt="Retirar">Retirar
-        </button>
-        <button onclick="window.location.href='perfil.html'">
-            <img src="perfil.png" alt="Perfil">Perfil de la empresa
-        </button>
-    </div>
-
-    <div class="content">
-        <img src="banner.png" alt="IFS Banner">
-    </div>
-
-    <div class="activities">
-        <h2>Actividades</h2>
-        <p>✨ ¡Toma acción! La plataforma fue promocionada a Facebook, WhatsApp y TikTok, y el equipo de creación alcanzó los 50 miembros de nivel A.</p>
-        <p style="color: green; font-weight: bold;">35.00 USDT</p>
-    </div>
-
-    <div class="countdown">23:58:09</div>
-
-    <!-- Sala de tareas -->
-    <div class="tasks">
+    <div class="task-room">
         <div class="task-card">
-            <img src="vip.png" alt="VIP 0">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 0">
             <h3>VIP-0</h3>
             <p>Comisión de pedido</p>
             <p class="price">$2.80</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 1">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 1">
             <h3>VIP-1</h3>
             <p>Comisión de pedido</p>
             <p class="price">$10.00</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 2">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 2">
             <h3>VIP-2</h3>
             <p>Comisión de pedido</p>
             <p class="price">$36.00</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 3">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 3">
             <h3>VIP-3</h3>
             <p>Comisión de pedido</p>
             <p class="price">$99.00</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 4">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 4">
             <h3>VIP-4</h3>
             <p>Comisión de pedido</p>
-            <p class="price">$150.00</p>
+            <p class="price">$231.00</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 5">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 5">
             <h3>VIP-5</h3>
             <p>Comisión de pedido</p>
-            <p class="price">$200.00</p>
+            <p class="price">$451.00</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 6">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 6">
             <h3>VIP-6</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$300.00</p>
-        </div>
-        <div class="task-card">
-            <img src="vip.png" alt="VIP 7">
-            <h3>VIP-7</h3>
-            <p>Comisión de pedido</p>
-            <p class="price">$450.00</p>
-        </div>
-        <div class="task-card">
-            <img src="vip.png" alt="VIP 8">
-            <h3>VIP-8</h3>
             <p>Comisión de pedido</p>
             <p class="price">$600.00</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 9">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 7">
+            <h3>VIP-7</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$700.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 8">
+            <h3>VIP-8</h3>
+            <p>Comisión de pedido</p>
+            <p class="price">$800.00</p>
+        </div>
+        <div class="task-card">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 9">
             <h3>VIP-9</h3>
             <p>Comisión de pedido</p>
             <p class="price">$850.00</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 10">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 10">
             <h3>VIP-10</h3>
             <p>Comisión de pedido</p>
             <p class="price">$1,000.00</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 11">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 11">
             <h3>VIP-11</h3>
             <p>Comisión de pedido</p>
             <p class="price">$1,200.00</p>
         </div>
         <div class="task-card">
-            <img src="vip.png" alt="VIP 12">
+            <img src="https://github.com/user-attachments/assets/c921d516-af47-4621-8e9b-e5c17214ec16" alt="VIP 12">
             <h3>VIP-12</h3>
             <p>Comisión de pedido</p>
             <p class="price">$1,500.00</p>
@@ -299,5 +187,6 @@
             A mí
         </button>
     </div>
+
 </body>
 </html>
