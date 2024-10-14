@@ -37,18 +37,20 @@
         .task-info {
             display: flex;
             justify-content: space-around;
-            margin: 20px 10px;
+            margin: 20px auto; /* Centramos y reducimos margen */
             color: white;
             background-color: #00b300;
             border-radius: 8px;
             padding: 10px 5px;
+            width: 90%; /* Reducimos ancho */
+            max-width: 400px; /* Máximo ancho */
         }
         .task-info div {
             flex: 1;
             text-align: center;
             padding: 10px;
         }
-        .task-info div h2 {
+        .task-info div h4 {
             margin: 0;
             font-size: 1.2em;
         }
@@ -64,6 +66,7 @@
         .timer {
             font-size: 1.2em;
             font-weight: bold;
+            display: none; /* Ocultamos el temporizador inicialmente */
         }
         .task-status {
             display: flex;
@@ -74,6 +77,9 @@
         }
         .task-status div {
             margin: 0 20px;
+            padding: 10px;
+            background-color: #e0e0e0; /* Sombreado gris */
+            border-radius: 5px;
         }
         .no-data {
             color: #aaa;
@@ -121,6 +127,21 @@
             }
         }
     </style>
+    <script>
+        // Función para mostrar el temporizador cuando haya una tarea
+        function mostrarTemporizador() {
+            const tareas = document.querySelectorAll('.task-info div span');
+            const timer = document.querySelector('.timer');
+            if (tareas[0].textContent > 0) {
+                timer.style.display = 'block'; // Mostrar el temporizador si hay tareas
+            } else {
+                timer.style.display = 'none'; // Ocultar si no hay tareas
+            }
+        }
+
+        // Ejecutar la función cuando se cargue la página
+        window.onload = mostrarTemporizador;
+    </script>
 </head>
 <body>
     <div class="header">
@@ -132,11 +153,11 @@
         <div class="task-info">
             <div>
                 <h4>Todas las tareas para hoy</h4>
-                <span>0</span>
+                <span>0</span> <!-- Actualizar este valor si hay tareas -->
             </div>
             <div>
                 <h4>Las tareas pendientes de hoy</h4>
-                <span>0</span>
+                <span>0</span> <!-- Actualizar este valor si hay tareas -->
             </div>
         </div>
 
@@ -152,7 +173,6 @@
         <div class="no-data">Sin datos</div>
     </div>
 
-    
     <div class="footer-nav">
         <button onclick="window.location.href='Home.html'">
             <img src="https://github.com/user-attachments/assets/752a7744-b455-422d-9d52-32b126d85812" alt="Home">
