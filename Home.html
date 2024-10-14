@@ -128,45 +128,47 @@ heigth: 1500px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 10px;
+            }/* Sala de Tareas */
+.tasks {
+    display: grid; /* Utiliza grid para las columnas */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 10px; /* Espacio entre columnas */
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-        /* Sala de Tareas */
-        .tasks {
-            padding: 10px;
-            background-color: white;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .task-card {
-            width: 45%; /* Asegura que haya dos columnas */
-            background-color: #f9f9f9;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 10px;
-        }
-        .task-card img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%; /* Imagen redondeada */
-            margin-bottom: 10px;
-        }
-        .task-card h3 {
-            font-size: 0.9em;
-            margin: 0;
-        }
-        .task-card p {
-            font-size: 0.9em;
-            margin: 5px 0;
-        }
-        .task-card .price {
-            color: green;
-            font-weight: bold;
-        }
+
+.task-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.task-card img {
+    width: 70px; /* Tamaño de la imagen */
+    height: 70px;
+    border-radius: 50%; /* Imagen redondeada */
+    margin-bottom: 10px;
+}
+
+.task-card h3 {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.task-card p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.task-card .price {
+    color: green;
+    font-weight: bold;
+}
 
         /* Galería de imágenes deslizable */
         .image-slider {
