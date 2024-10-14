@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #00b300;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .header img {
+            max-width: 100px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .buttons button {
+            background-color: #00b300;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .content {
+            padding: 10px;
+        }
+        .task-room {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .task-item {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .task-item img {
+            max-width: 50px;
+            margin-bottom: 10px;
+        }
+        .task-item button {
+            background-color: #00b300;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #00b300;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="header">
+        <h1>IFS</h1>
+        <p>Save your money & time</p>
+    </div>
+
+    <div class="buttons">
+        <button onclick="window.location.href='recargar.html'">Recargar</button>
+        <button onclick="window.location.href='retirar.html'">Retirar</button>
+        <button onclick="window.location.href='perfil.html'">Perfil de la empresa</button>
+    </div>
+
+    <div class="content">
+        <h2>Actividades</h2>
+        <p>Toma acción! La plataforma fue promocionada a Facebook, WhatsApp y TikTok, y el equipo de creación alcanzó los 50 miembros de nivel A</p>
+        <p>35.00 USDT</p>
+
+        <h3>Cuenta regresiva para restablecer tareas: 23:58:09</h3>
+
+        <h2>Sala de tareas</h2>
+        <div class="task-room">
+            <div class="task-item">
+                <img src="vip0.png" alt="VIP 0">
+                <p>Comisión de pedido: $2.80</p>
+                <button onclick="window.location.href='vip0.html'">VIP 0</button>
+            </div>
+            <div class="task-item">
+                <img src="vip1.png" alt="VIP 1">
+                <p>Comisión de pedido: $10.00</p>
+                <button onclick="window.location.href='vip1.html'">VIP 1</button>
+            </div>
+            <div class="task-item">
+                <img src="vip2.png" alt="VIP 2">
+                <p>Comisión de pedido: $36.00</p>
+                <button onclick="window.location.href='vip2.html'">VIP 2</button>
+            </div>
+            <div class="task-item">
+                <img src="vip3.png" alt="VIP 3">
+                <p>Comisión de pedido: $99.00</p>
+                <button onclick="window.location.href='vip3.html'">VIP 3</button>
+            </div>
+            <div class="task-item">
+                <img src="vip4.png" alt="VIP 4">
+                <p>Comisión de pedido: $231.00</p>
+                <button onclick="window.location.href='vip4.html'">VIP 4</button>
+            </div>
+            <div class="task-item">
+                <img src="vip5.png" alt="VIP 5">
+                <p>Comisión de pedido: $451.00</p>
+                <button onclick="window.location.href='vip5.html'">VIP 5</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 IFS</p>
+    </div>
+
+</body>
+  </html>
