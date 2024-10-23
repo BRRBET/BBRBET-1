@@ -11,7 +11,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
@@ -20,16 +20,16 @@
         .vip-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 15px;
             width: 100%;
-            max-width: 400px; /* Limit width for smaller screens */
+            max-width: 350px; /* Smaller width for cards */
         }
 
         .vip-card {
             background: linear-gradient(145deg, #111, #222);
-            border-radius: 15px;
+            border-radius: 12px; /* Smaller border radius */
             width: 100%; /* Full width of the container */
-            padding: 10px; /* Reduced padding */
+            padding: 10px;
             color: #fff;
             text-align: center;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
@@ -38,15 +38,20 @@
         }
 
         .vip-card h3 {
-            font-size: 22px; /* Smaller font size */
+            font-size: 18px; /* Smaller font size */
             color: gold;
             margin: 5px 0;
         }
 
+        .vip-card .icon {
+            font-size: 28px; /* Smaller icon size */
+            margin-bottom: 10px;
+        }
+
         .vip-card .details {
-            font-size: 16px; /* Smaller font size */
+            font-size: 14px; /* Smaller text */
             color: #ccc;
-            margin: 10px 0;
+            margin: 8px 0;
         }
 
         .vip-card .details p {
@@ -56,7 +61,7 @@
         .vip-card .buy-btn {
             background: linear-gradient(145deg, #ffdd00, #cfa800);
             color: #111;
-            font-size: 14px; /* Smaller font size */
+            font-size: 14px; /* Button text size */
             border: none;
             padding: 8px 15px; /* Reduced padding */
             border-radius: 8px;
@@ -68,6 +73,7 @@
         .vip-card .buy-btn:hover {
             background: linear-gradient(145deg, #e9b700, #b98a00);
         }
+
     </style>
 </head>
 <body>
@@ -75,6 +81,7 @@
     <div class="vip-container">
         <!-- VIP 1 Card -->
         <div class="vip-card">
+            <div class="icon">🎁</div>
             <h3>VIP 1</h3>
             <div class="details">
                 <p>Price: 10 USDT</p>
@@ -86,6 +93,7 @@
 
         <!-- VIP 2 Card -->
         <div class="vip-card">
+            <div class="icon">🎁</div>
             <h3>VIP 2</h3>
             <div class="details">
                 <p>Price: 15 USDT</p>
@@ -97,6 +105,7 @@
 
         <!-- VIP 3 Card -->
         <div class="vip-card">
+            <div class="icon">🎁</div>
             <h3>VIP 3</h3>
             <div class="details">
                 <p>Price: 20 USDT</p>
@@ -108,6 +117,7 @@
 
         <!-- VIP 4 Card -->
         <div class="vip-card">
+            <div class="icon">🎁</div>
             <h3>VIP 4</h3>
             <div class="details">
                 <p>Price: 25 USDT</p>
@@ -119,6 +129,7 @@
 
         <!-- VIP 5 Card -->
         <div class="vip-card">
+            <div class="icon">🎁</div>
             <h3>VIP 5</h3>
             <div class="details">
                 <p>Price: 30 USDT</p>
@@ -130,6 +141,7 @@
 
         <!-- VIP 6 Card -->
         <div class="vip-card">
+            <div class="icon">🎁</div>
             <h3>VIP 6</h3>
             <div class="details">
                 <p>Price: 35 USDT</p>
