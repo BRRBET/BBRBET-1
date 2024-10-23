@@ -6,8 +6,8 @@
     <title>VIP Cards</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,70 +22,109 @@
         }
 
         .vip-card {
-            background-color: #222;
-            border-radius: 15px;
-            width: 350px;
+            background: linear-gradient(145deg, #111, #222);
+            border-radius: 20px;
+            width: 400px;
             padding: 20px;
             color: #fff;
             text-align: center;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
             position: relative;
+            border: 1px solid #444;
         }
 
         .vip-card h3 {
-            font-size: 24px;
+            font-size: 28px;
             color: gold;
             margin: 10px 0;
+            font-family: 'Verdana', sans-serif;
         }
 
-        .vip-card .earnings, .vip-card .interest {
+        .vip-card .icon {
+            font-size: 50px;
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        .vip-card .details {
             font-size: 18px;
-            margin: 10px 0;
+            color: #ccc;
+            margin: 15px 0;
+        }
+
+        .vip-card .details p {
+            margin: 5px 0;
         }
 
         .vip-card .buy-btn {
-            background-color: #e9b700;
-            color: #000;
+            background: linear-gradient(145deg, #ffdd00, #cfa800);
+            color: #111;
             font-size: 16px;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 8px;
             cursor: pointer;
-            margin-top: 15px;
+            transition: background 0.3s ease;
         }
 
         .vip-card .buy-btn:hover {
-            background-color: #cfa800;
+            background: linear-gradient(145deg, #e9b700, #b98a00);
         }
+
+        /* Card Specific Colors */
+        .vip-card.vip1 {
+            border: 2px solid #ffd700;
+            box-shadow: 0px 4px 12px rgba(255, 215, 0, 0.8);
+        }
+
+        .vip-card.vip2 {
+            border: 2px solid #8b00ff;
+            box-shadow: 0px 4px 12px rgba(139, 0, 255, 0.8);
+        }
+
+        .vip-card.vip3 {
+            border: 2px solid #ff4500;
+            box-shadow: 0px 4px 12px rgba(255, 69, 0, 0.8);
+        }
+
     </style>
 </head>
 <body>
 
     <div class="vip-container">
         <!-- VIP 1 Card -->
-        <div class="vip-card">
+        <div class="vip-card vip1">
             <h3>VIP 1</h3>
-            <p class="earnings">Daily Earnings: 1.50 USDT</p>
-            <p class="interest">Interest: 1.50%</p>
-            <p>Total Profit: 135.00 USDT</p>
+            <div class="icon">💰</div>
+            <div class="details">
+                <p>Daily Earnings: 1.50 USDT</p>
+                <p>Interest: 1.50%</p>
+                <p>Total Profit: 135.00 USDT</p>
+            </div>
             <button class="buy-btn">Buy</button>
         </div>
 
         <!-- VIP 2 Card -->
-        <div class="vip-card">
+        <div class="vip-card vip2">
             <h3>VIP 2</h3>
-            <p class="earnings">Daily Earnings: 8.00 USDT</p>
-            <p class="interest">Interest: 8.00%</p>
-            <p>Total Profit: 800.00 USDT</p>
+            <div class="icon">💎</div>
+            <div class="details">
+                <p>Daily Earnings: 8.00 USDT</p>
+                <p>Interest: 8.00%</p>
+                <p>Total Profit: 800.00 USDT</p>
+            </div>
             <button class="buy-btn">Buy</button>
         </div>
 
         <!-- VIP 3 Card -->
-        <div class="vip-card">
+        <div class="vip-card vip3">
             <h3>VIP 3</h3>
-            <p class="earnings">Daily Earnings: 25.00 USDT</p>
-            <p class="interest">Interest: 36.00%</p>
-            <p>Total Profit: 2,060.00 USDT</p>
+            <div class="icon">👑</div>
+            <div class="details">
+                <p>Daily Earnings: 25.00 USDT</p>
+                <p>Interest: 36.00%</p>
+                <p>Total Profit: 2,060.00 USDT</p>
+            </div>
             <button class="buy-btn">Buy</button>
         </div>
     </div>
