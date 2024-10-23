@@ -36,14 +36,15 @@
 
         .financial-records-btn {
             position: absolute;
-            top: -10px;
-            right: -10px;
+            top: 10px;
+            right: 10px;
             cursor: pointer;
-            background-color: green;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 10px;
+        }
+
+        .financial-records-btn img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
         }
 
         h2 {
@@ -176,8 +177,10 @@
             <img src="https://github.com/user-attachments/assets/ad08cf9f-465c-431a-a42d-99d2b2e3321f" alt="Logo">
         </a>
 
-        <!-- Botón de Registros Financieros -->
-        <button class="financial-records-btn" onclick="openModal()">Registros Financieros</button>
+        <!-- Botón de Registros Financieros como imagen circular -->
+        <a href="javascript:void(0)" class="financial-records-btn" onclick="openModal()">
+            <img src="https://via.placeholder.com/40" alt="Registros Financieros">
+        </a>
         
         <h2>Cuenta De Retiro</h2>
 
@@ -268,4 +271,4 @@
         }
     </script>
 </body>
-                        </html>
+</html>
