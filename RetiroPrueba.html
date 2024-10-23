@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .vip-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .vip-card {
+            background-color: #222;
+            border-radius: 15px;
+            width: 350px;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .vip-card h3 {
+            font-size: 24px;
+            color: gold;
+            margin: 10px 0;
+        }
+
+        .vip-card .earnings, .vip-card .interest {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .vip-card .buy-btn {
+            background-color: #e9b700;
+            color: #000;
+            font-size: 16px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .vip-card .buy-btn:hover {
+            background-color: #cfa800;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vip-container">
+        <!-- VIP 1 Card -->
+        <div class="vip-card">
+            <h3>VIP 1</h3>
+            <p class="earnings">Daily Earnings: 1.50 USDT</p>
+            <p class="interest">Interest: 1.50%</p>
+            <p>Total Profit: 135.00 USDT</p>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+        <!-- VIP 2 Card -->
+        <div class="vip-card">
+            <h3>VIP 2</h3>
+            <p class="earnings">Daily Earnings: 8.00 USDT</p>
+            <p class="interest">Interest: 8.00%</p>
+            <p>Total Profit: 800.00 USDT</p>
+            <button class="buy-btn">Buy</button>
+        </div>
+
+        <!-- VIP 3 Card -->
+        <div class="vip-card">
+            <h3>VIP 3</h3>
+            <p class="earnings">Daily Earnings: 25.00 USDT</p>
+            <p class="interest">Interest: 36.00%</p>
+            <p>Total Profit: 2,060.00 USDT</p>
+            <button class="buy-btn">Buy</button>
+        </div>
+    </div>
+
+</body>
+</html>
