@@ -27,22 +27,23 @@
             flex-direction: column;
             gap: 25px; /* Aumenta el espacio entre las tarjetas */
             width: 100%;
-            max-width: 320px; /* Aumenta un poco el ancho máximo */
+            max-width: 280px; /* Ancho máximo reducido para hacer las tarjetas más pequeñas */
             margin-bottom: 150px;
+            align-items: center; /* Centra las tarjetas horizontalmente */
         }
 
-        /* Tarjetas llamativas con bordes en ángulo y un gradiente vibrante */
+        /* Tarjetas más pequeñas y llamativas */
         .vip-card {
             background: linear-gradient(135deg, #7f00ff, #e100ff); /* Color degradado llamativo */
             border-radius: 20px; /* Bordes redondeados */
-            width: 100%;
-            padding: 20px;
+            width: 100%; /* Tarjetas más pequeñas y centradas */
+            padding: 15px; /* Reducción del padding */
             color: #fff;
             text-align: center;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8); /* Sombra más pronunciada */
             position: relative;
             border: none;
-            transform: perspective(500px) rotateX(6deg) rotateY(-6deg); /* Efecto 3D en las tarjetas */
+            transform: perspective(500px) rotateX(6deg) rotateY(-6deg); /* Efecto 3D */
             transition: transform 0.3s ease-in-out;
         }
 
@@ -51,33 +52,33 @@
         }
 
         .vip-card h3 {
-            font-size: 18px;
+            font-size: 16px; /* Fuente más pequeña */
             color: #ffeb3b; /* Color dorado brillante */
             margin: 5px 0;
         }
 
         .vip-card .icon {
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 24px; /* Tamaño del icono reducido */
+            margin-bottom: 10px;
         }
 
         .vip-card .details {
-            font-size: 14px;
+            font-size: 12px; /* Texto más pequeño */
             color: #ddd; /* Texto más claro */
-            margin: 10px 0;
+            margin: 8px 0;
         }
 
         .vip-card .buy-btn {
             background: linear-gradient(145deg, #ffd700, #ff8c00); /* Nuevo botón degradado */
             color: #111;
-            font-size: 14px;
+            font-size: 13px; /* Texto más pequeño */
             border: none;
-            padding: 10px 20px;
+            padding: 8px 15px; /* Reducción del padding */
             border-radius: 30px; /* Botón con bordes redondeados */
             cursor: pointer;
             transition: background 0.3s ease;
             width: 100%;
-            max-width: 200px;
+            max-width: 160px; /* Botón más pequeño */
             margin: 0 auto; /* Centrar el botón */
         }
 
@@ -89,7 +90,7 @@
         .banner {
             background-color: #ffeb3b;
             color: black;
-            padding: 4px 10px;
+            padding: 3px 8px; /* Banner más pequeño */
             font-size: 10px;
             font-weight: bold;
             border-radius: 8px;
