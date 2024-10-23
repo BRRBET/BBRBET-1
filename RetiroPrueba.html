@@ -17,19 +17,23 @@
             box-sizing: border-box;
         }
 
+        .spacer {
+            height: 150px; /* Espacio de 150px */
+        }
+
         .vip-container {
             display: flex;
             flex-direction: column;
             gap: 10px;
             width: 100%;
-            max-width: 300px; /* Más estrechas las tarjetas */
+            max-width: 300px;
         }
 
         .vip-card {
             background: linear-gradient(145deg, #111, #222);
-            border-radius: 10px; /* Borde más pequeño */
-            width: 100%; 
-            padding: 10px;
+            border-radius: 50% 50% 0 0 / 50% 50% 0 0; /* Forma de nube */
+            width: 100%;
+            padding: 20px;
             color: #fff;
             text-align: center;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
@@ -38,18 +42,18 @@
         }
 
         .vip-card h3 {
-            font-size: 16px; /* Tamaño de fuente reducido */
+            font-size: 16px;
             color: gold;
             margin: 5px 0;
         }
 
         .vip-card .icon {
-            font-size: 26px; /* Tamaño del icono reducido */
+            font-size: 26px;
             margin-bottom: 10px;
         }
 
         .vip-card .details {
-            font-size: 12px; /* Texto más pequeño */
+            font-size: 12px;
             color: #ccc;
             margin: 8px 0;
         }
@@ -57,9 +61,9 @@
         .vip-card .buy-btn {
             background: linear-gradient(145deg, #ffdd00, #cfa800);
             color: #111;
-            font-size: 12px; /* Tamaño del texto del botón más pequeño */
+            font-size: 12px;
             border: none;
-            padding: 8px 12px; /* Menos padding */
+            padding: 8px 12px;
             border-radius: 8px;
             cursor: pointer;
             transition: background 0.3s ease;
@@ -70,19 +74,17 @@
             background: linear-gradient(145deg, #e9b700, #b98a00);
         }
 
-        /* Banner estilo cinta para Desbloquear */
+        /* Banner más pequeño dentro de la tarjeta */
         .banner {
-            position: absolute;
-            top: -10px;
-            right: -20px;
             background-color: gold;
             color: black;
-            padding: 5px 30px;
-            font-size: 12px;
+            padding: 4px 10px;
+            font-size: 10px;
             font-weight: bold;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transform: rotate(45deg); /* Rotación para hacerla llamativa */
+            position: absolute;
+            top: 10px;
+            left: 10px; /* Dentro de la tarjeta */
         }
 
         /* Barra inferior con botones */
@@ -91,12 +93,12 @@
             justify-content: space-between;
             align-items: center;
             position: fixed;
-            bottom: 10px; /* Más abajo */
+            bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
             width: 90%;
             max-width: 400px;
-            background-color: transparent; /* Fondo invisible */
+            background-color: transparent;
         }
 
         .bottom-nav a {
@@ -111,7 +113,7 @@
         }
 
         .bottom-nav a.middle {
-            font-size: 24px; /* Tamaño reducido del ícono del centro */
+            font-size: 24px;
             background-color: transparent;
             border: 2px solid gold;
             border-radius: 50%;
@@ -120,6 +122,9 @@
     </style>
 </head>
 <body>
+
+    <!-- Spacer de 150px -->
+    <div class="spacer"></div>
 
     <div class="vip-container">
         <!-- VIP 1 Card -->
@@ -205,7 +210,7 @@
     <div class="bottom-nav">
         <a href="home.html">🏠</a>
         <a href="wallet.html">💷</a>
-        <a href="star.html" class="middle">🌟</a> <!-- Botón del medio más pequeño -->
+        <a href="star.html" class="middle">🌟</a>
         <a href="shop.html">🛒</a>
         <a href="profile.html">🙍‍♂️</a>
     </div>
